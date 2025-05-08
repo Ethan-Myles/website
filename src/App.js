@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import SelectionBar from './components/selectionBar.js';
+import Theme from './components/Theme';
+import EmblaCarousel from './components/EmblaCarousel';
+import EthanMyles from './components/EthanMyles';
+import './styles/embla.css';
+import './styles/globals.css';
+
+const OPTIONS = { slidesToScroll: 'auto' }
+const SLIDE_COUNT = 10
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SelectionBar/>
+      <Theme/>
+      <EthanMyles/>
+      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+      <div className="App">
+      </div>
+    </>
   );
 }
 

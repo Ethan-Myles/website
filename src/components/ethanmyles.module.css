@@ -1,0 +1,48 @@
+.welcome-text{
+    white-space: nowrap; /*text always stays on one line*/
+    overflow: hidden; /*Makes sure the text isn't visable past the edges*/
+    width: 0;
+    border-right: 2px solid transparent; /*The cursor*/
+    animation: typing 1.7s steps(15, end) forwards, /*Forwards means the animation stops at the end*/
+    blinking 1s 4.8; /*Stops after 4.8 seconds*/
+    color: var(--typing-colour);
+  }
+  
+  @keyframes typing {
+    from { width: 0; margin: 60px auto; } /*auto margin to keep the text centered through the animation*/
+    to { width: 16.9%; margin: 60px auto; }
+  }
+  
+  @keyframes blinking {
+    0% {border-right-color: transparent}
+    50% {border-right-color: var(--typing-colour)}
+    100% {border-right-color: transparent}
+  }
+  
+  .welcome-paragraph{
+    max-width: 630px;
+    margin: 60px auto;
+  }
+  
+  .ethanmyles-heading{
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .glowable-text {
+    color: black; /* Normal text color */
+  }
+  
+  /* Glow effect when hovered or when triggered by Glow component */
+  [glow] .glowable-text {
+    color: var(--glow-color); /* Dynamic color from Glow component */
+    text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), 0 0 30px var(--glow-color);
+    transition: color 0.2s ease, text-shadow 0.2s ease; /* Smooth transition */
+  }
+  
+  /* Optional: add a fallback if glow color is not set */
+  [glow] .glowable-text:before {
+    content: 'Glow effect is not working!';
+    color: red; /* Will show if the glow effect doesn't work */
+    display: block;
+  }

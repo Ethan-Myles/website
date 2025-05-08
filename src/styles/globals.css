@@ -1,0 +1,116 @@
+:root {
+    --background-light: #ffffff;
+    --background-dark: #000000;
+    --text-light: #000000;
+    --text-dark: #ffffff;
+    --link-light: #000000;
+    --link-dark: #ffffff;
+    --typing-colour-light: #000000;
+    --typing-colour-dark: #ffffff;
+    --purple-1: #ead9ef;
+    --purple-2: #0d0915;
+}
+  
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+margin: 0;
+padding: 0;
+}
+
+/*
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('./fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('./fonts/Roboto-Bold.ttf') format('truetype');
+}
+    */
+
+body {
+    /*font-family: 'Roboto-Bold', sans-serif;*/
+    font-weight: bold;
+    line-height: 1.6;
+    background-color: var(--background-dark);
+    transition: all 1s ease;
+}
+
+a {
+    font-size: 22px;
+    text-decoration: none;
+    color: var(--link-dark);
+    transition: color 0.3s;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p {
+    /*font-family: 'Roboto-Medium', sans-serif;*/
+    font-size: 18px;
+}
+
+body.dark {
+    background-color: var(--background-dark);
+    --typing-colour: var(--typing-colour-dark);
+}
+
+body:not(.dark) {
+    background-color: var(--background-light);
+    --typing-colour: var(--typing-colour-light);
+}
+
+body.dark p {
+    color: var(--text-dark);
+}
+
+body:not(.dark) p {
+    color: var(--text-light);
+}
+
+body.dark a {
+    color: var(--link-dark);
+}
+
+hr{
+    width: 60%;
+    color: rgb(58, 57, 57);
+}
+
+body:not(.dark) a {
+    color: var(--link-light);  /* Light link color */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 60%;
+}
+  
+.box {
+    color: white;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px;
+}
+
+body.dark .box {
+    color: white;
+}
+
+body:not(.dark) .box {
+    color: black;
+}
