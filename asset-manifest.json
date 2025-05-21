@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Ethan-Myles/website/static/css/main.17c7c050.css",
+    "main.js": "/Ethan-Myles/website/static/js/main.ad6b2aeb.js",
+    "index.html": "/Ethan-Myles/website/index.html",
+    "main.17c7c050.css.map": "/Ethan-Myles/website/static/css/main.17c7c050.css.map",
+    "main.ad6b2aeb.js.map": "/Ethan-Myles/website/static/js/main.ad6b2aeb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.17c7c050.css",
+    "static/js/main.ad6b2aeb.js"
+  ]
+}
