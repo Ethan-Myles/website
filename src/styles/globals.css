@@ -5,8 +5,8 @@
     --text-dark: #ffffff;
     --link-light: #000000;
     --link-dark: #ffffff;
-    --typing-colour-light: #000000;
-    --typing-colour-dark: #ffffff;
+    --typing-colour-light: #007fff;
+    --typing-colour-dark: #007fff;
     --purple-1: #ead9ef;
     --purple-2: #0d0915;
 }
@@ -34,12 +34,14 @@ padding: 0;
 }
     */
 
-body {
+html, body {
     /*font-family: 'Roboto-Bold', sans-serif;*/
     font-weight: bold;
     line-height: 1.6;
     background-color: var(--background-dark);
     transition: all 1s ease;
+    overflow-x: hidden;
+    position: relative;
 }
 
 a {
@@ -80,31 +82,39 @@ body.dark a {
     color: var(--link-dark);
 }
 
-hr{
-    width: 60%;
-    color: rgb(58, 57, 57);
-}
-
 body:not(.dark) a {
-    color: var(--link-light);  /* Light link color */
+    color: var(--link-light);
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 40px;
-    width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1000px;
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 0 16px;
 }
-  
+
 .box {
-    color: white;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
+  flex: 1 1 200px;
+  min-width: 150px;
+  max-width: 300px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.container .box:nth-child(2) {
+    flex: 2 1 400px;
+    max-width: 700px;
     text-align: center;
-    margin: 0 10px;
+    justify-content: center;
+    margin-top: -15px; /*This isn't good practice*/
 }
 
 body.dark .box {

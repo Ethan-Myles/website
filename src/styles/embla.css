@@ -4,7 +4,7 @@
     --slide-height: 19rem;
     --slide-spacing: 1rem;
     --slide-size: 45%;
-    margin-top: 170px;
+    margin-top: 50px;
     margin-left: 0px;
   }
   
@@ -14,24 +14,32 @@
   }
   
   .embla__slide {
+    border-radius: 1.8rem;
     transform: translate3d(0, 0, 0);
     flex: 0 0 var(--slide-size);
     min-width: 0;
     margin-left: var(--slide-spacing);
   }
 
-  .embla__slide__description {
-    border-radius: 1.8rem;
-    font-size: 40px;
+  .embla__slide__title {
+    font-size: 20px;
     display: flex;
-    align-items: center;
     justify-content: center;
     height: var(--slide-height);
     user-select: none;
-    background-color: #464646;
-    color: #ffffff;
+    margin-top: 20px;
   }
-  
+
+  .embla__slide__content {
+    font-size: 18px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    user-select: none;
+    margin-top: -265px; /*This isn't good practice*/
+  }
+
   .embla__controls {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -66,11 +74,60 @@
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
+  }
+
+  body.dark .embla__button {
     background-color: black;
+  }
+
+  body:not(.dark) .embla__button {
+    background-color: white;
   }
   
   .embla__button__svg {
     width: 35%;
     height: 35%;
+  }
+
+  body.dark .embla__button__svg {
     color: white;
   }
+
+  body:not(.dark) .embla__button__svg {
+    color: black;
+  }
+
+  body.dark .embla__slide {
+    background-color: #212121;
+  }
+
+  body:not(.dark) .embla__slide {
+    background-color: #dddddd;
+  }
+
+  .embla_hr {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    color: rgb(167, 167, 167);
+  }
+
+  @media (max-width: 768px) {
+    .embla {
+      --slide-size: 80%;
+      --slide-height: 15rem;
+    }
+
+    .embla__slide__title {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .embla__slide__content {
+      font-size: 16px;
+      margin-top: -200px;
+    }
+  }
+

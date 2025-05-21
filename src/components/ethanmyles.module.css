@@ -10,7 +10,7 @@
   
   @keyframes typing {
     from { width: 0; margin: 60px auto; } /*auto margin to keep the text centered through the animation*/
-    to { width: 16.9%; margin: 60px auto; }
+    to { width: 28.5ch; margin: 60px auto; }
   }
   
   @keyframes blinking {
@@ -19,30 +19,29 @@
     100% {border-right-color: transparent}
   }
   
-  .welcome-paragraph{
+  .welcome-paragraph {
     max-width: 630px;
     margin: 60px auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+    text-align: center;
   }
   
   .ethanmyles-heading{
     text-align: center;
     margin-top: 20px;
   }
-  
-  .glowable-text {
-    color: black; /* Normal text color */
+
+  hr{
+    width: 60%;
+    color: rgb(58, 57, 57);
+  }
+
+  body:not(.dark) .ethanmyles-heading p {
+    color: #007fff;
+  }
+
+  body.dark .ethanmyles-heading p {
+    color: #007fff;
   }
   
-  /* Glow effect when hovered or when triggered by Glow component */
-  [glow] .glowable-text {
-    color: var(--glow-color); /* Dynamic color from Glow component */
-    text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), 0 0 30px var(--glow-color);
-    transition: color 0.2s ease, text-shadow 0.2s ease; /* Smooth transition */
-  }
-  
-  /* Optional: add a fallback if glow color is not set */
-  [glow] .glowable-text:before {
-    content: 'Glow effect is not working!';
-    color: red; /* Will show if the glow effect doesn't work */
-    display: block;
-  }
