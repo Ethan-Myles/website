@@ -78,6 +78,14 @@ body:not(.dark) p {
     color: var(--text-light);
 }
 
+body.dark h1 {
+    color: var(--text-dark);
+}
+
+body:not(.dark) h1 {
+    color: var(--text-light);
+}
+
 body.dark h2 {
     color: var(--text-dark);
 }

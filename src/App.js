@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SelectionBar from './components/selectionBar.js';
-import Theme from './components/Theme.js';
+import SelectionBar from './components/GlobalUI/selectionBar.js';
+import Theme from './components/GlobalUI/Theme.js';
 import EthanMyles from './components/EthanMyles/EthanMyles.js';
-import Projects from './components/Projects';
-import PageNotFound from './components/PageNotFound';
+import Projects from './components/Projects/Projects.js';
+import PageNotFound from './components/PageNotFound/PageNotFound.js';
 import './styles/embla.css';
 import './styles/globals.css';
 
