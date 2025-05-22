@@ -1,26 +1,23 @@
-import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SelectionBar from './components/selectionBar.js';
-import Theme from './components/Theme';
-import EmblaCarousel from './components/EmblaCarousel';
-import EthanMyles from './components/EthanMyles';
+import Theme from './components/Theme.js';
+import EthanMyles from './components/EthanMyles/EthanMyles.js';
+import Projects from './components/Projects';
+import PageNotFound from './components/PageNotFound';
 import './styles/embla.css';
 import './styles/globals.css';
 
-const OPTIONS = { slidesToScroll: 'auto' }
-const SLIDE_COUNT = 10
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-
-
 function App() {
   return (
-    <>
+    <Router>
       <SelectionBar/>
       <Theme/>
-      <EthanMyles/>
-      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-      <div className="App">
-      </div>
-    </>
+        <Routes>
+          <Route path="/" element={<EthanMyles/>} />
+          <Route path="/projects" element={<Projects/>} />
+          <Route path="*" element={<PageNotFound/>} />
+        </Routes>
+    </Router>
   );
 }
 

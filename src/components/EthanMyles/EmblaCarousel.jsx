@@ -3,9 +3,9 @@ import {
   PrevButton,
   NextButton,
   usePrevNextButtons
-} from './EmblaCarouselArrowButtons'
+} from './EmblaCarouselArrowButtons.jsx'
 import useEmblaCarousel from 'embla-carousel-react'
-import slideData from '../data/slideData.js';
+import slideData from '../../data/slideData.js';
 
 const EmblaCarousel = (props) => {
   const {options } = props

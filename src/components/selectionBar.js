@@ -1,14 +1,14 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './selectionbar.module.css';
 
 function SelectionBar() {
   return (
     <div className={styles['selection-bar']}>
-      <a href="/">Ethan Myles</a>
-      <a href="/projects">Projects</a>
-      <a href="/university">University</a>
-      <a href="/contact">Contact</a>
-      <a href="/additional-info">Additional Info</a>
+      <Link to ="/">Ethan Myles</Link>
+      <Link to ="/projects">Projects</Link>
+      <Link to ="/university">University</Link>
+      <Link to ="/contact">Contact</Link>
+      <Link to ="/additional-info">Additional Info</Link>
     </div>
   );
 }

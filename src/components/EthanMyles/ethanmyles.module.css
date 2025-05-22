@@ -1,4 +1,4 @@
-.welcome-text{
+  .welcome-text{
     white-space: nowrap; /*text always stays on one line*/
     overflow: hidden; /*Makes sure the text isn't visable past the edges*/
     width: 0;
@@ -42,6 +42,14 @@
   }
 
   body.dark .ethanmyles-heading p {
+    color: #007fff;
+  }
+
+    body:not(.dark) .welcome-text h2 {
+    color: #007fff;
+  }
+
+  body.dark .welcome-text h2 {
     color: #007fff;
   }
   
