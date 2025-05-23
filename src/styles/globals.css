@@ -36,12 +36,14 @@ padding: 0;
 
 html, body {
     /*font-family: 'Roboto-Bold', sans-serif;*/
+    height: 100%;
     font-weight: bold;
     line-height: 1.6;
     background-color: var(--background-dark);
     transition: all 1s ease;
     overflow-x: hidden;
     position: relative;
+
 }
 
 a {

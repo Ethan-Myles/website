@@ -8,7 +8,6 @@ function EthanMyles() {
   return(
   <>
     <title>Ethan Myles</title>
-    <hr size="1"></hr>
     <div className={styles['welcome-text']}>
       <h2>Hi there, I'm Ethan Myles</h2>
     </div>

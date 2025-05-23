@@ -32,11 +32,6 @@
     margin-top: 20px;
   }
 
-  hr{
-    width: 60%;
-    color: rgb(58, 57, 57);
-  }
-
   body:not(.dark) .ethanmyles-heading p {
     color: #007fff;
   }
