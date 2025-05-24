@@ -1,4 +1,4 @@
-  .welcome-text{
+  .ethanmyles-welcome-text{
     white-space: nowrap; /*text always stays on one line*/
     overflow: hidden; /*Makes sure the text isn't visable past the edges*/
     width: 0;
@@ -10,7 +10,7 @@
   
   @keyframes typing {
     from { width: 0; margin: 60px auto; } /*auto margin to keep the text centered through the animation*/
-    to { width: 28.5ch; margin: 60px auto; }
+    to { width: var(--welcome-text-width); margin: 60px auto; }
   }
   
   @keyframes blinking {
@@ -19,7 +19,7 @@
     100% {border-right-color: transparent}
   }
   
-  .welcome-paragraph {
+  .ethanmyles-welcome-paragraph {
     max-width: 630px;
     margin: 60px auto;
     padding: 0 16px;
@@ -40,11 +40,11 @@
     color: #007fff;
   }
 
-    body:not(.dark) .welcome-text h2 {
+  body:not(.dark) .ethanmyles-welcome-text h2 {
     color: #007fff;
   }
 
-  body.dark .welcome-text h2 {
+  body.dark .ethanmyleswelcome-text h2 {
     color: #007fff;
   }
   

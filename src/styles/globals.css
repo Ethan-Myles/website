@@ -7,8 +7,10 @@
     --link-dark: #ffffff;
     --typing-colour-light: #007fff;
     --typing-colour-dark: #007fff;
-    --purple-1: #ead9ef;
-    --purple-2: #0d0915;
+    --contact-button-colour-dark: #212121;
+    --contact-button-colour-light: #dddddd;
+    --contact-shadow-colour-dark: #4d4d4d;
+    --contact-shadow-colour-light: #000000;
 }
   
 body,
@@ -64,12 +66,18 @@ p {
 
 body.dark {
     background-color: var(--background-dark);
+    --text-colour: var(--text-dark);
     --typing-colour: var(--typing-colour-dark);
+    --contact-colour: var(--contact-button-colour-dark);
+    --contact-shadow-colour: var(--contact-shadow-colour-dark);
 }
 
 body:not(.dark) {
     background-color: var(--background-light);
+    --text-colour: var(--text-light);
     --typing-colour: var(--typing-colour-light);
+    --contact-colour: var(--contact-button-colour-light);
+    --contact-shadow-colour: var(--contact-shadow-colour-light);
 }
 
 body.dark p {

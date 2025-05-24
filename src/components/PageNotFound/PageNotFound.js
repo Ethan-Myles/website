@@ -3,6 +3,7 @@ import styles from './pagenotfound.module.css'
 function PageNotFound() {
   return (
     <>
+      <title>404 - Page Not Found</title>
       <div class={styles['pnf-container']}>
         <div className={styles['pnf-title']}>
           <h1>404</h1>

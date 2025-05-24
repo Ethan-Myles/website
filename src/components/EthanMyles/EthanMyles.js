@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import styles from './ethanmyles.module.css'
 import EmblaCarousel from './EmblaCarousel.jsx';
 const OPTIONS = { slidesToScroll: 'auto' }
@@ -5,13 +6,31 @@ const SLIDE_COUNT = 10
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 function EthanMyles() {
+
+  const [greeting, setGreeting] = useState('Hi there');
+  const [width, setWidth] = useState('28.5ch');
+
+  useEffect(() => {
+    const hour = new Date().getHours();
+    if (hour < 12) {
+      setGreeting("Good morning");
+      setWidth('36ch');
+    } else if (hour < 18) {
+      setGreeting("Good afternoon");
+      setWidth('37.5ch');
+    } else {
+      setGreeting("Good evening");
+      setWidth('35ch');
+    }
+  }, []);
+
   return(
   <>
     <title>Ethan Myles</title>
-    <div className={styles['welcome-text']}>
-      <h2>Hi there, I'm Ethan Myles</h2>
+    <div className={styles['ethanmyles-welcome-text']} style={{ '--welcome-text-width': width }}>
+      <h2>{greeting}, I'm Ethan Myles</h2>
     </div>
-    <div className={styles['welcome-paragraph']}>
+    <div className={styles['ethanmyles-welcome-paragraph']}>
       <p>Computer Science graduate from the University of Liverpool.
         I'm driven by my passion to solve problems.
         Now equipped with a year of industry experience as a student software developer.

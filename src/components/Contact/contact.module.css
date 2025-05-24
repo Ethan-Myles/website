@@ -1,0 +1,88 @@
+.contact-text{
+  text-align: center;
+  margin-top: 10vw;
+  margin-left: 6vw;
+  margin-right: 6vw;
+  margin-bottom: 4vw;
+}
+
+body:not(.dark) .contact-text h2 {
+    color: #007fff;
+}
+
+body.dark .contact-text h2 {
+    color: #007fff;
+}
+
+.contact-container{
+  display: flex;
+  justify-content: center;
+}
+
+.center-contact-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  font-family: inherit;
+  cursor: pointer;
+}
+ 
+.contact:hover .contact-slide-show-text1 {
+  text-align: center;
+} 
+ 
+.contact-shadow-drop {
+  color: var(--text-colour);
+  position: relative;
+  margin-top: 3%;
+  background: var(--contact-colour);
+  padding: 20px;
+  transition: 0.3s ease-in-out;
+  left: 0px;
+  top: 0px;
+  border-radius: 12px;
+}
+
+.contact-shadow-drop:hover {
+  left: 4px;
+  top: 4px;
+  box-shadow: var(--text-colour);
+  border-radius: 12px;
+} 
+ 
+.contact-shadow-drop--black {
+  border: 1px solid var(--contact-shadow-colour);
+  box-shadow: var(--contact-shadow-colour) 4px 4px 0px 0px;
+}
+
+.contact-email{
+    font-size: clamp(22px, 2vw, 40px);
+    width: clamp(290px, 27vw, 490px);
+    margin-bottom: 5vw;
+}
+
+.contact-Linkedin{
+    font-size: clamp(55px, 5vw, 80px);
+    width: clamp(100px, 8vw, 110px);
+    height: clamp(90px, 8vw, 110px);
+}
+
+/*Not good practice*/
+@media (min-width: 768px) {
+
+  .contact-text{
+    margin-top: 2vw;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .contact-email{
+    margin-bottom: -1vw;
+    margin-top: 2vw;
+  }
+}
+

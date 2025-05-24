@@ -1,10 +1,14 @@
 
+import styles from './projects.module.css'
+
 function Projects() {
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>Projects Page</h1>
-      <p>This is where my projects will go</p>
-    </div>
+    <>
+      <title>Projects</title>
+      <div className={styles['projects-temp']}>
+        <h2>This is where my projects will go</h2>
+      </div>
+    </>
   );
 }
 
