@@ -10,7 +10,7 @@
 .pnf-title h1 {
     font-size: 30vw; 
     text-align: center;
-    margin-top: -200px; /*Not good practice*/
+    margin-top: -200px; /*This isn't good practice*/
     margin-bottom: 40px;
 }
 
@@ -24,7 +24,7 @@
     height: auto;
     opacity: 0.5;
     display: block;
-    margin: -200px auto 0; /*Not good practice*/
+    margin: -200px auto 0; /*This isn't good practice*/
     margin-bottom: 10px;
 }
 

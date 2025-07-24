@@ -1,16 +1,18 @@
 :root {
-    --background-light: #ffffff;
     --background-dark: #000000;
-    --text-light: #000000;
+    --background-light: #ffffff;
     --text-dark: #ffffff;
-    --link-light: #000000;
+    --text-light: #000000;
     --link-dark: #ffffff;
+    --link-light: #000000;
+    --typing-colour-dark:  #007fff;
     --typing-colour-light: #007fff;
-    --typing-colour-dark: #007fff;
     --contact-button-colour-dark: #212121;
     --contact-button-colour-light: #dddddd;
     --contact-shadow-colour-dark: #4d4d4d;
     --contact-shadow-colour-light: #000000;
+    --additional-info-button-hover-colour-dark: #dbdbdb;
+    --additional-info-button-hover-colour-light: #212121;
 }
   
 body,
@@ -41,7 +43,7 @@ html, body {
     height: 100%;
     font-weight: bold;
     line-height: 1.6;
-    background-color: var(--background-dark);
+    --background-colour: var(--background-dark);
     transition: all 1s ease;
     overflow-x: hidden;
     position: relative;
@@ -67,17 +69,21 @@ p {
 body.dark {
     background-color: var(--background-dark);
     --text-colour: var(--text-dark);
+    --text-colour-reverse: var(--text-light);
     --typing-colour: var(--typing-colour-dark);
     --contact-colour: var(--contact-button-colour-dark);
     --contact-shadow-colour: var(--contact-shadow-colour-dark);
+    --additional-info-button-hover-colour: var(--additional-info-button-hover-colour-dark);
 }
 
 body:not(.dark) {
     background-color: var(--background-light);
     --text-colour: var(--text-light);
+    --text-colour-reverse: var(--text-dark);
     --typing-colour: var(--typing-colour-light);
     --contact-colour: var(--contact-button-colour-light);
     --contact-shadow-colour: var(--contact-shadow-colour-light);
+    --additional-info-button-hover-colour: var(--additional-info-button-hover-colour-light);
 }
 
 body.dark p {

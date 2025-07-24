@@ -25,12 +25,12 @@ function AdditionalInfo() {
       <div className={styles['video-container']}>
         <div className={styles['video']}>
           <a href="https://www.youtube.com/watch?v=Ue3VrbsTw9M&t=4s" target="_blank" rel="noopener noreferrer">
-            <img src={videoImage} alt="infix to postfix conversion using a stack" className={styles['logo-image']}></img>
+            <img src={videoImage} alt="infix to postfix conversion using a stack" className={styles['video-image']}></img>
           </a>
         </div>
         <div className={styles['video']}>
           <a href="https://www.youtube.com/watch?v=AhSlgQGKQyo" target="_blank" rel="noopener noreferrer">
-            <img src={videoTwoImage} alt="matrix chain multiplication" className={styles['logo-image']}></img>
+            <img src={videoTwoImage} alt="matrix chain multiplication" className={styles['videoTwo-image']}></img>
           </a>
         </div> 
       </div>

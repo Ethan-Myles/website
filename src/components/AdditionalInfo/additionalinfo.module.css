@@ -65,17 +65,22 @@
 }
 
 .additional-info-button {
-  width: 150px;
-  height: 40px;
-  background-color: white;
-  color: black;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color ease;
-  margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: var(--text-colour);
+    color: var(--text-colour-reverse);
+    font-weight: 600;
+    transition: background-color ease;
+    margin-top: 20px;
 }
+
+.additional-info-button:hover {
+    background-color: var(--additional-info-button-hover-colour);
+}
+
 
 .container > div.video{
     grid-area: video;
@@ -83,10 +88,6 @@
 
 .container > div.video-two{
     grid-area: videoTwo;
-}
-
-.additional-info-button:hover {
-  background-color: #dbdbdb;
 }
 
 .logo-image{
@@ -114,6 +115,28 @@
         max-width: 180%;
         height: auto;
         margin-left: -40%;
+    }
+    .container > div.banner{
+        border: none;
+    }
+    .container > div.logo{
+        border: none;
+    }
+    .logo-image{
+        border: 1px solid white;
+    }
+    .container > div.info{
+        text-align: left;
+        line-height: 2.5;
+        margin-top: -21px; /*This isn't good practice*/
+    }
+    .video-container {
+        display: grid;
+        grid-template-areas:
+        "video"
+        "videoTwo";
+        grid-template-columns: 1fr;
+        padding: 0 40px;
     }
 }
 
