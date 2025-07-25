@@ -7,7 +7,7 @@ function SelectionBar() {
       <div className={styles['selection-bar']}>
         <Link to ="/">Ethan Myles</Link>
         <Link to ="/projects">Projects</Link>
-        <Link to ="/university">University</Link>
+        <Link to ="/blog">Blog</Link>
         <Link to ="/contact">Contact</Link>
         <Link to ="/additional-info">Additional Info</Link>
       </div>
