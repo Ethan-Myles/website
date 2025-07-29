@@ -1,14 +1,13 @@
-import React from 'react'
+import styles from './emblaHorizontal.module.css'
 import {
   PrevButton,
   NextButton,
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons.jsx'
 import useEmblaCarousel from 'embla-carousel-react'
-import slideData from '../../data/slideData.js';
 
 const EmblaCarousel = (props) => {
-  const {options } = props
+  const {options, slides } = props
   
   const [emblaRef, emblaApi] = useEmblaCarousel({
     ...options,
@@ -23,14 +22,13 @@ const EmblaCarousel = (props) => {
   } = usePrevNextButtons(emblaApi)
 
   return (
-    <section className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          {slideData.map((slide, index) => (
-            <div className="embla__slide" key={index}>
-              <p className="embla__slide__title">{slide.title}</p>
-              <hr className = "embla_hr" size="1"></hr>
-              <p className = "embla__slide__content">{slide.content}</p>
+    <section className={`embla ${styles.embla}`}>
+      <div className={`embla__viewport`} ref={emblaRef}>
+        <div className={`embla__container ${styles.embla__container}`}>
+          {slides.map((slide, index) => (
+            <div className={`embla__slide ${styles.embla__slide}`} key={index}>
+              <p className={`embla__slide__title ${styles.embla__slide__title}`}>{slide.title}</p>
+              <p className = {`embla__slide__content ${styles.embla__slide__content}`}>{slide.content}</p>
             </div>
           ))}
         </div>

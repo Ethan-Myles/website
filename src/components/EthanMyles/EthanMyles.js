@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import styles from './ethanmyles.module.css'
 import EmblaCarousel from './EmblaCarousel.jsx';
-const OPTIONS = { slidesToScroll: 'auto' }
-const SLIDE_COUNT = 10
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+import slideData from '../../data/skillsData.js'
+const OPTIONS = { slidesToScroll: 'auto'}
 
 function EthanMyles() {
 
@@ -66,7 +65,7 @@ function EthanMyles() {
     <div className={styles['ethanmyles-heading']}>
       <p>Skills</p>
     </div>
-    <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+    <EmblaCarousel slides={slideData} options={OPTIONS} />
   </>
   )
 }

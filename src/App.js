@@ -7,7 +7,6 @@ import Blog from './components/Blog/Blog.js';
 import Contact from './components/Contact/Contact.js';
 import AdditionalInfo from './components/AdditionalInfo/AdditionalInfo.js';
 import PageNotFound from './components/PageNotFound/PageNotFound.js';
-import './styles/embla.css';
 import './styles/globals.css';
 
 function App() {
