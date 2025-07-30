@@ -1,38 +1,82 @@
-.wrapper {
-  display: flex;
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 40px;
+  padding: 40px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.blogs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 5px 110px;
+  margin: 0 auto;
+  max-width: 600px;
+  /*Use 1px wide backgrounds to get the two lines left and right of the buttons*/
+  background:
+    linear-gradient(rgb(116, 115, 115), rgb(116, 115, 115)) left center / 1px 350px no-repeat,
+    linear-gradient(rgb(116, 115, 115), rgb(116, 115, 115)) right center / 1px 350px no-repeat;
+}
+
+.blog-introduction{
+  display: flex; 
   justify-content: center;
+  padding: 20px;
   align-items: center;
-  height: 50vh;
-  gap: 30px;
 }
 
-.vertical-line {
-  width: 1px;
-  height: 488px;
-  background-color: rgb(116, 115, 115);
-}
-
-.button-group {
-  display: flex;
-  flex-direction: column;
+.blog-topics {
+  display: flex;    
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
   align-items: center;
 }
 
 .blog-button {
   font-family: inherit;
   cursor: pointer;
-  padding: 10px 20px;
   border: 1px solid rgb(116, 115, 115);
   background-color: #101010;
-  color: white;
   border-radius: 20px;
   font-size: 16px;
   transition: border 0.3s ease;
-  width: 500px;
   height: 100px;
-  margin: 20px 0;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 800px;
 }
 
 .blog-button:hover {
   border: 1px solid rgb(173, 173, 173);
 }
+
+.blog-title{
+  height: 45px;
+}
+
+body:not(.dark) .blog-button p {
+    color: rgb(173, 173, 173);
+}
+
+body.dark .blog-button p {
+    color: rgb(173, 173, 173);
+}
+
+body:not(.dark) .blog-topic{
+    display: block;
+    font-size: 18px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+body.dark .blog-topic{
+    display: block;
+    font-size: 18px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
